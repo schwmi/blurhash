@@ -1,6 +1,10 @@
+#if os(iOS)
 import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
 
-extension UIImage {
+extension BHImage {
     public convenience init?(blurHash: String, size: CGSize, punch: Float = 1) {
         guard blurHash.count >= 6 else { return nil }
 
@@ -62,7 +66,11 @@ extension UIImage {
         guard let cgImage = CGImage(width: width, height: height, bitsPerComponent: 8, bitsPerPixel: 24, bytesPerRow: bytesPerRow,
         space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: bitmapInfo, provider: provider, decode: nil, shouldInterpolate: true, intent: .defaultIntent) else { return nil }
 
+        #if os(iOS)
         self.init(cgImage: cgImage)
+        #elseif os(macOS)
+        self.init(cgImage: cgImage, size: .init(width: width, height: height))
+        #endif
     }
 }
 

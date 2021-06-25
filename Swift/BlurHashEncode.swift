@@ -1,9 +1,24 @@
+#if os(iOS)
 import UIKit
+typealias BHImage = UIImage
+#elseif os(macOS)
+import AppKit
+typealias BHImage = NSImage
+#endif
 
-extension UIImage {
+extension BHImage {
+
+    var imageScale: CGFloat {
+        #if os(iOS)
+        return self.scale
+        #elseif os(macOS)
+        return 1
+        #endif
+    }
+
     public func blurHash(numberOfComponents components: (Int, Int)) -> String? {
-		let pixelWidth = Int(round(size.width * scale))
-		let pixelHeight = Int(round(size.height * scale))
+        let pixelWidth = Int(round(size.width * self.imageScale))
+        let pixelHeight = Int(round(size.height * self.imageScale))
 
 		let context = CGContext(
 			data: nil,
@@ -14,12 +29,16 @@ extension UIImage {
 			space: CGColorSpace(name: CGColorSpace.sRGB)!,
 			bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
 		)!
-		context.scaleBy(x: scale, y: -scale)
+        context.scaleBy(x: self.imageScale, y: -self.imageScale)
 		context.translateBy(x: 0, y: -size.height)
 
-		UIGraphicsPushContext(context)
-		draw(at: .zero)
-		UIGraphicsPopContext()
+        context.saveGState()
+        #if os(iOS)
+        draw(at: .zero)
+        #elseif os(macOS)
+        draw(in: .init(origin: .zero, size: .init(width: pixelWidth, height: pixelHeight)))
+        #endif
+        context.restoreGState()
 
 		guard let cgImage = context.makeImage(),
 		let dataProvider = cgImage.dataProvider,

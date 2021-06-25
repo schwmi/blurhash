@@ -48,6 +48,11 @@
 		1BC34D7E20098E1500A17481 /* TupleMaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC34D7D20098E1500A17481 /* TupleMaths.swift */; };
 		1BC34D8020098E2F00A17481 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC34D7F20098E2F00A17481 /* Generation.swift */; };
 		1BDE56D12011EC5F00569DCB /* ColourProbes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE56D02011EC5F00569DCB /* ColourProbes.swift */; };
+		C862F4E22686649900BBFE94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862F4E12686649900BBFE94 /* AppDelegate.swift */; };
+		C862F4E42686649A00BBFE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C862F4E32686649A00BBFE94 /* Assets.xcassets */; };
+		C862F4E72686649A00BBFE94 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C862F4E52686649A00BBFE94 /* MainMenu.xib */; };
+		C862F509268664C800BBFE94 /* BlurHashEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49CD261EC47243006F8E7D /* BlurHashEncode.swift */; };
+		C862F50A268664CC00BBFE94 /* BlurHashDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49CD281EC4724C006F8E7D /* BlurHashDecode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +169,16 @@
 		1BEFFFC620BFF7B100187F3F /* Algorithm.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = Algorithm.md; path = ../Algorithm.md; sourceTree = "<group>"; };
 		1BEFFFC720BFF7B100187F3F /* CodeOfConduct.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CodeOfConduct.md; path = ../CodeOfConduct.md; sourceTree = "<group>"; };
 		1BEFFFC820C000DE00187F3F /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		C862F4DF2686649900BBFE94 /* BlurHashTestMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlurHashTestMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C862F4E12686649900BBFE94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C862F4E32686649A00BBFE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C862F4E62686649A00BBFE94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C862F4E82686649A00BBFE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C862F4E92686649A00BBFE94 /* BlurHashTestMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlurHashTestMacOS.entitlements; sourceTree = "<group>"; };
+		C862F4F22686649B00BBFE94 /* BlurHashTestMacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurHashTestMacOSTests.swift; sourceTree = "<group>"; };
+		C862F4F42686649B00BBFE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C862F4FD2686649B00BBFE94 /* BlurHashTestMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurHashTestMacOSUITests.swift; sourceTree = "<group>"; };
+		C862F4FF2686649B00BBFE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +205,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B6C71F32272451E000D3BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C862F4DC2686649900BBFE94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,6 +331,9 @@
 				1BEFFFC720BFF7B100187F3F /* CodeOfConduct.md */,
 				1BEFFFC820C000DE00187F3F /* License.txt */,
 				1BEFFFC320BFE34800187F3F /* Readme.md */,
+				C862F4E02686649900BBFE94 /* BlurHashTestMacOS */,
+				C862F4F12686649B00BBFE94 /* BlurHashTestMacOSTests */,
+				C862F4FC2686649B00BBFE94 /* BlurHashTestMacOSUITests */,
 				1B49CD1C1EC4721A006F8E7D /* Products */,
 				1B6C71F122724500000D3BB1 /* BlurHashKit copy-Info.plist */,
 			);
@@ -321,6 +346,7 @@
 				1B0A250C1EC5E90C00F25F08 /* BlurHashTest.app */,
 				1B2BA1BD1F0E5EC5006057C1 /* blurhash */,
 				1B6C71F62272451E000D3BB1 /* libBlurHashKit.a */,
+				C862F4DF2686649900BBFE94 /* BlurHashTestMacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,6 +424,36 @@
 			);
 			name = Kotlin;
 			path = ../Kotlin;
+			sourceTree = "<group>";
+		};
+		C862F4E02686649900BBFE94 /* BlurHashTestMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				C862F4E12686649900BBFE94 /* AppDelegate.swift */,
+				C862F4E32686649A00BBFE94 /* Assets.xcassets */,
+				C862F4E52686649A00BBFE94 /* MainMenu.xib */,
+				C862F4E82686649A00BBFE94 /* Info.plist */,
+				C862F4E92686649A00BBFE94 /* BlurHashTestMacOS.entitlements */,
+			);
+			path = BlurHashTestMacOS;
+			sourceTree = "<group>";
+		};
+		C862F4F12686649B00BBFE94 /* BlurHashTestMacOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C862F4F22686649B00BBFE94 /* BlurHashTestMacOSTests.swift */,
+				C862F4F42686649B00BBFE94 /* Info.plist */,
+			);
+			path = BlurHashTestMacOSTests;
+			sourceTree = "<group>";
+		};
+		C862F4FC2686649B00BBFE94 /* BlurHashTestMacOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C862F4FD2686649B00BBFE94 /* BlurHashTestMacOSUITests.swift */,
+				C862F4FF2686649B00BBFE94 /* Info.plist */,
+			);
+			path = BlurHashTestMacOSUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +540,23 @@
 			productReference = 1B6C71F62272451E000D3BB1 /* libBlurHashKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		C862F4DE2686649900BBFE94 /* BlurHashTestMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C862F5062686649B00BBFE94 /* Build configuration list for PBXNativeTarget "BlurHashTestMacOS" */;
+			buildPhases = (
+				C862F4DB2686649900BBFE94 /* Sources */,
+				C862F4DC2686649900BBFE94 /* Frameworks */,
+				C862F4DD2686649900BBFE94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlurHashTestMacOS;
+			productName = BlurHashTestMacOS;
+			productReference = C862F4DF2686649900BBFE94 /* BlurHashTestMacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -491,7 +564,7 @@
 			isa = PBXProject;
 			attributes = {
 				DefaultBuildSystemTypeForWorkspace = Latest;
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Dag Ågren";
 				TargetAttributes = {
@@ -517,6 +590,10 @@
 						DevelopmentTeam = M9KXCWYWYR;
 						ProvisioningStyle = Automatic;
 					};
+					C862F4DE2686649900BBFE94 = {
+						CreatedOnToolsVersion = 12.5;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 1B49CD151EC4721A006F8E7D /* Build configuration list for PBXProject "BlurHash" */;
@@ -537,6 +614,7 @@
 				1B6C71F52272451E000D3BB1 /* libBlurHashKit */,
 				1B0A250B1EC5E90C00F25F08 /* BlurHashTest */,
 				1B2BA1BC1F0E5EC5006057C1 /* blurhash */,
+				C862F4DE2686649900BBFE94 /* BlurHashTestMacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -562,6 +640,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C862F4DD2686649900BBFE94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C862F4E42686649A00BBFE94 /* Assets.xcassets in Resources */,
+				C862F4E72686649A00BBFE94 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +713,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C862F4DB2686649900BBFE94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C862F509268664C800BBFE94 /* BlurHashEncode.swift in Sources */,
+				C862F50A268664CC00BBFE94 /* BlurHashDecode.swift in Sources */,
+				C862F4E22686649900BBFE94 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -651,6 +748,14 @@
 				1B0A25181EC5E90C00F25F08 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C862F4E52686649A00BBFE94 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C862F4E62686649A00BBFE94 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -905,6 +1010,55 @@
 			};
 			name = Release;
 		};
+		C862F5002686649B00BBFE94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = BlurHashTestMacOS/BlurHashTestMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BlurHashTestMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolt.BlurHashTestMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C862F5012686649B00BBFE94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = BlurHashTestMacOS/BlurHashTestMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BlurHashTestMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolt.BlurHashTestMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -949,6 +1103,15 @@
 			buildConfigurations = (
 				1B6C71FB2272451E000D3BB1 /* Debug */,
 				1B6C71FC2272451E000D3BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C862F5062686649B00BBFE94 /* Build configuration list for PBXNativeTarget "BlurHashTestMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C862F5002686649B00BBFE94 /* Debug */,
+				C862F5012686649B00BBFE94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
